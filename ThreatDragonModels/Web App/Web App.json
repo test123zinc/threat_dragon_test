@@ -33,8 +33,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "1c280198-630e-4c12-b9ab-0ff5a4cd3ff7",
             "zIndex": 1,
+            "id": "1c280198-630e-4c12-b9ab-0ff5a4cd3ff7",
             "data": {
               "type": "tm.Text",
               "name": "· Spoofing\n· Tampering\n· Repudiation\n· Information Disclosure\n· Denial of Service\n· Elevation of Privilege",
@@ -62,6 +62,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -145,7 +146,6 @@
               ]
             },
             "id": "73dc669f-75c9-4d09-bb7d-eced843cd40b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Admin",
@@ -179,6 +179,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -262,7 +263,6 @@
               ]
             },
             "id": "50aeeb35-084c-42fd-b951-d1e86263dbbb",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Buyer",
@@ -296,6 +296,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -379,7 +380,6 @@
               ]
             },
             "id": "c4243615-6004-4765-80b0-a90b3a822907",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "App \nServer",
@@ -416,6 +416,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -499,7 +500,6 @@
               ]
             },
             "id": "052bacd3-0df0-4c48-8c84-969858808ab3",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Web\nServer",
@@ -539,6 +539,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -622,7 +623,6 @@
               ]
             },
             "id": "d6dce467-80e8-4691-ba9c-581d00b08077",
-            "zIndex": 6,
             "data": {
               "type": "tm.Store",
               "name": "Database",
@@ -667,62 +667,6 @@
               "y": 440
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "84a17ed5-ca8c-40f7-8f26-00c915b48ba5",
-            "source": {
-              "x": 380,
-              "y": 320
-            },
-            "target": {
-              "cell": "052bacd3-0df0-4c48-8c84-969858808ab3",
-              "port": "d6902f0d-6844-425d-ae42-179315548649"
-            },
-            "vertices": [
-              {
-                "x": 470,
-                "y": 430
-              },
-              {
-                "x": 530,
-                "y": 350
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -873,8 +817,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -895,46 +838,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "91afd62e-3b58-4f19-b180-88c091accb6d",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 1,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "trustBoundaryIds": []
             },
             "labels": [
               "Data Flow 1\n"
             ],
-            "id": "3aa2b581-1c4a-4fa1-888e-a51104568964",
+            "id": "77d6d48e-6044-490a-abde-2fcf0885f80f",
             "source": {
               "x": 373,
-              "y": 312
+              "y": 318
             },
             "target": {
               "cell": "052bacd3-0df0-4c48-8c84-969858808ab3",
               "port": "d6902f0d-6844-425d-ae42-179315548649"
-            },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 412
-              }
-            ]
+            }
           }
         ]
       }
